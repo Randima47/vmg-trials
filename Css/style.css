@@ -1,0 +1,288 @@
+
+
+  /*- RESET AND BASE STYLES-*/
+  
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fff;
+  color: black;
+  line-height: 24px;
+}
+
+/*- HEADER -*/
+   
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 32px;
+  border-bottom: 2px solid black;
+}
+
+header img.logo {
+  width: 50px;
+  height: 50px;
+}
+
+/*- NAVIGATION -*/
+   
+nav.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+}
+
+nav.main-nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  padding: 8px 16px;
+  transition: all 0.3s ease;
+}
+
+nav.main-nav ul li a:hover {
+  background-color: red;
+  color: #fff;
+  border-radius: 5px;
+}
+
+/*- SUB-NAV / SECTION NAV STYLING -*/
+
+nav.our-storynav,
+nav.devnav,
+nav.appnav,
+nav.webnav,
+nav.brandnav,
+nav.contentnav,
+nav.servicesbook,
+nav.appbookings,
+nav.webbookings,
+nav.brandbookings,
+nav.contentbookings {
+    margin-top: 15px;
+    margin-bottom: 16px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 16px;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 8px 16px;
+    border: 2px solid black; /* added border to match buttons */
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+nav ul li a:hover {
+    background-color: red;
+    color: #fff;
+    border-color: red;
+}
+
+nav ul button {
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+nav ul button:hover a {
+    background-color: red;
+    color: #fff;
+    border-color: red;
+}
+
+/*- HERO SECTION -*/
+  
+.hero {
+  text-align: center;
+  padding: 64px 32px;
+}
+
+.hero h1 {
+  font-size: 40px;
+  margin-bottom: 16px;
+}
+
+.hero p {
+  font-size: 20px;
+}
+
+/*- QUICK LINKS -*/
+   
+.quick-links {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin: 32px 0;
+}
+
+.quick-links .btn-link {
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  padding: 12px 24px;
+  border: 2px solid black;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.quick-links .btn-link:hover {
+  background-color: red;
+  color: #fff;
+  border-color: red;
+}
+
+/*- SERVICES SECTION -*/
+   
+.services {
+  text-align: center;
+  padding: 32px;
+}
+
+.services h2 {
+  margin-bottom: 32px;
+  font-size: 32px;
+}
+
+.service-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+}
+
+.service-images img {
+  width: 200px;
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.service-images img:hover {
+  transform: scale(1.05);
+}
+
+/*- FORMS -*/
+   
+form {
+  max-width: 600px;
+  margin: 32px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+form label {
+  font-weight: bold;
+}
+
+form input,
+form textarea,
+form select {
+  padding: 8px;
+  border: 2px solid black;
+  border-radius: 5px;
+  width: 100%;
+}
+
+form button {
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  background-color: black;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+form button:hover {
+  background-color: red;
+}
+
+/*- FOOTER -*/
+    
+footer {
+  text-align: center;
+  padding: 24px 32px;
+  border-top: 2px solid black;
+  margin-top: 32px;
+  background-color: #fff;
+}
+
+/*- RESPONSIVE DESIGN -*/
+
+/* Medium devices (tablets) */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav.main-nav ul {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .service-images {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .quick-links {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+/* Small devices (mobile) */
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  form {
+    padding: 0 16px;
+  }
+
+  nav.main-nav ul li a {
+    padding: 8px;
+  }
+
+  .service-images img {
+    width: 150px;
+  }
+}
+
+/* Responsive adjustments for sub-navs (moved to bottom) */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
